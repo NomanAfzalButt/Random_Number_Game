@@ -10,21 +10,41 @@
         body{
             background-color: antiquewhite;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: larger;
+            font-size: 40px;
             text-align: center;
         }
         #first {
             color: red;
         }
+        #num {
+            border: 2px solid black;
+            height: 40px;
+            width: 60px;
+            font-size: 40px;
+            border-radius: 6px;
+            background-color: transparent;
+        }
+        #button1 {
+            font-size: 35px;
+            margin-left: 40px;
+            transition: 0.4s;
+            border: 2px solid red;
+            cursor: pointer;
+            background-color: white;
+        }
+        #button1:hover {
+            background-color: red;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div id="first"> 
-    <h2>Random Number Guess Game</h2>
+    <h2>Random Number Guessing Game</h2>
     <br>
     <form onsubmit="NumCheck(); return false">
-        Enter your Guess : <input type="number" min="0" max="10" id="num">
-        <button type="submit">Submit</button>
+        Enter your Guess : <input type="number" min ="0" max="10" id="num">
+        <button type="submit" id="button1">Submit</button>
     </form>
     <br>
     <hr>
@@ -48,6 +68,7 @@
         else {
             document.querySelector("#ans").innerHTML = `Random Number ${rond},  You guessed it wrong, Try Again.`;
         }
+        
     }
     </script>
 </body>
